@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-labelledby="title desc">
+  <title id="title">Котик с дипломом</title>
+  <desc id="desc">Милый кот держит свернутый диплом и улыбается.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#000000" flood-opacity=".24"/>
+    </filter>
+  </defs>
+  <g filter="url(#softShadow)">
+    <ellipse cx="260" cy="424" rx="145" ry="44" fill="#0f1016" opacity=".22"/>
+    <path d="M141 268c0-94 62-166 119-166s119 72 119 166v90c0 70-51 103-119 103s-119-33-119-103z" fill="#f2b77e"/>
+    <path d="M157 155 104 63c-8-14 7-29 21-21l85 48z" fill="#f2b77e"/>
+    <path d="M363 155 416 63c8-14-7-29-21-21l-85 48z" fill="#f2b77e"/>
+    <path d="M146 105 120 58l48 28zM374 105l26-47-48 28z" fill="#ef8d91"/>
+    <path d="M140 258c0-78 53-135 120-135s120 57 120 135c0 77-53 132-120 132s-120-55-120-132z" fill="#ffc987"/>
+    <circle cx="210" cy="244" r="13" fill="#15131a"/>
+    <circle cx="320" cy="244" r="13" fill="#15131a"/>
+    <circle cx="214" cy="239" r="4" fill="#fff8ed"/>
+    <circle cx="324" cy="239" r="4" fill="#fff8ed"/>
+    <path d="M260 264c11 0 19 6 19 13 0 8-8 14-19 14s-19-6-19-14c0-7 8-13 19-13z" fill="#75433c"/>
+    <path d="M260 291c-7 20-35 23-45 5M260 291c7 20 35 23 45 5" fill="none" stroke="#75433c" stroke-width="8" stroke-linecap="round"/>
+    <path d="M152 293c-25-10-50-14-78-12M153 319c-27 0-51 5-75 16M368 293c25-10 50-14 78-12M367 319c27 0 51 5 75 16" fill="none" stroke="#8b5a48" stroke-width="6" stroke-linecap="round"/>
+    <path d="M168 362c-52 8-78 41-73 75 5 31 38 42 69 21 17-12 35-29 54-47z" fill="#f2b77e"/>
+    <path d="M352 362c52 8 78 41 73 75-5 31-38 42-69 21-17-12-35-29-54-47z" fill="#f2b77e"/>
+    <rect x="188" y="353" width="167" height="62" rx="31" fill="#fff8ed"/>
+    <path d="M199 384h142" stroke="#d99b4f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M330 352c27 4 43 14 48 30 5 17-9 36-33 39-13 2-23-3-27-12 28-3 36-18 31-29-5-12-17-17-36-19z" fill="#f0b66f"/>
+    <path d="M171 352c-27 4-43 14-48 30-5 17 9 36 33 39 13 2 23-3 27-12-28-3-36-18-31-29 5-12 17-17 36-19z" fill="#f0b66f"/>
+    <path d="M166 126 260 74l94 52-94 50z" fill="#2b3147"/>
+    <path d="M208 148v46c35 18 83 18 118 0v-46z" fill="#20263b"/>
+    <path d="M354 127v62" stroke="#ffd166" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="354" cy="196" r="13" fill="#ffd166"/>
+    <path d="M238 73c7-16 28-16 35 0" fill="none" stroke="#ff8fa3" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

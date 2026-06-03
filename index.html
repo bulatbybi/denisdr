@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Персональное поздравление с днем рождения">
+    <title>С днем рождения</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="floating-words" aria-hidden="true">
+      <span style="--x: 6%; --y: 14%; --delay: -1s;">СИЯЙ</span>
+      <span style="--x: 72%; --y: 10%; --delay: -7s;">ДЕНЬГИ</span>
+      <span style="--x: 18%; --y: 32%; --delay: -13s;">ЗДОРОВЬЕ</span>
+      <span style="--x: 82%; --y: 34%; --delay: -4s;">РАБОТА</span>
+      <span style="--x: 7%; --y: 56%; --delay: -10s;">УСПЕХ</span>
+      <span style="--x: 56%; --y: 60%; --delay: -16s;">ДЕРЕВНЯ</span>
+      <span style="--x: 76%; --y: 82%; --delay: -19s;">ФАРТ</span>
+      <span style="--x: 44%; --y: 22%; --delay: -22s;">СИЛА</span>
+      <span style="--x: 12%; --y: 88%; --delay: -24s;">РАДОСТЬ</span>
+      <span style="--x: 64%; --y: 45%; --delay: -27s;">ЗАРПЛАТА</span>
+      <span style="--x: 88%; --y: 68%; --delay: -30s;">ДРУЗЬЯ</span>
+    </div>
+
+    <header class="hero">
+      <div class="money-current" aria-hidden="true">
+        <span style="--left: 5%; --delay: -0.2s; --drift: 42px; --spin: 360deg; --scale: 0.9;">₽</span>
+        <span style="--left: 13%; --delay: -1.6s; --drift: -34px; --spin: -420deg; --scale: 1.15;">22</span>
+        <span style="--left: 22%; --delay: -2.8s; --drift: 58px; --spin: 520deg; --scale: 0.78;">₽</span>
+        <span style="--left: 31%; --delay: -0.9s; --drift: -48px; --spin: -320deg; --scale: 1.04;">₽</span>
+        <span style="--left: 41%; --delay: -3.4s; --drift: 28px; --spin: 460deg; --scale: 0.86;">22</span>
+        <span style="--left: 50%; --delay: -2.1s; --drift: -62px; --spin: -560deg; --scale: 1.2;">₽</span>
+        <span style="--left: 59%; --delay: -4.1s; --drift: 44px; --spin: 380deg; --scale: 0.82;">₽</span>
+        <span style="--left: 68%; --delay: -1.2s; --drift: -30px; --spin: -470deg; --scale: 1.08;">22</span>
+        <span style="--left: 78%; --delay: -3s; --drift: 66px; --spin: 610deg; --scale: 0.92;">₽</span>
+        <span style="--left: 88%; --delay: -0.5s; --drift: -52px; --spin: -360deg; --scale: 1.16;">₽</span>
+        <span style="--left: 96%; --delay: -2.4s; --drift: 34px; --spin: 440deg; --scale: 0.74;">22</span>
+      </div>
+      <nav class="topbar" aria-label="Навигация поздравления">
+        <a href="#top" class="brand">С 22 днем рождения тебя!</a>
+        <div class="topbar-links">
+          <a href="#photos">Фото</a>
+          <a href="#wishes">Пожелания</a>
+          <a href="#village">Деревня</a>
+        </div>
+      </nav>
+
+      <section class="hero-stage" id="top" aria-labelledby="pageTitle">
+        <div class="hero-copy reveal is-visible">
+          <p class="eyebrow">Персональная миссия года</p>
+          <h1 id="pageTitle">С днем рождения, легенда</h1>
+          <p class="lead">
+            Пусть новый год жизни будет ярким, богатым и уверенным:
+            рядом свои люди, в голове спокойствие, в кармане много-много денег,
+            а впереди только красивые победы.
+          </p>
+          <div class="hero-actions">
+            <button class="celebrate-button firework-trigger" type="button">
+              <span class="spark" aria-hidden="true"></span>
+              <span>Запустить фейерверк</span>
+            </button>
+            <span class="hero-note">Листай дальше</span>
+          </div>
+        </div>
+
+        <figure class="hero-photo reveal is-visible">
+          <img src="assets/gallery/birthday-04.jpg" alt="Именинник улыбается в тюбетейке">
+          <figcaption>Главный герой дня</figcaption>
+        </figure>
+      </section>
+    </header>
+
+    <main>
+      <section class="ticker" aria-label="Праздничные слова">
+        <div class="ticker-track">
+          <span>С днем рождения</span>
+          <span>здоровья</span>
+          <span>денег</span>
+          <span>фарту</span>
+          <span>работы без напряга</span>
+          <span>работа на стиле</span>
+          <span>деревня ждет</span>
+          <span>Булат под вопросом</span>
+          <span>С днем рождения</span>
+          <span>здоровья</span>
+          <span>денег</span>
+          <span>фарту</span>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-labelledby="introTitle">
+        <p class="eyebrow">Праздничный маршрут</p>
+        <h2 id="introTitle">Сегодня все кадры, огни и пожелания работают на тебя</h2>
+        <p>
+          Пусть день будет шумным от смеха, теплым от друзей и таким удачным,
+          чтобы его хотелось пересматривать как лучший момент года.
+        </p>
+      </section>
+
+      <section class="photo-story" id="photos" aria-label="Фотографии именинника">
+        <article class="scene scene-wide reveal" style="--chapter-number: '01'; --scene-accent: var(--cyan); --scene-glow: rgba(88, 230, 255, 0.34);">
+          <div class="scene-copy">
+            <p class="chapter">01 / Свои люди</p>
+            <h2>Пусть рядом всегда будет команда</h2>
+            <p>
+              Та самая компания, с которой любое место становится праздником,
+              любой стол - штабом веселья, а каждый вечер получает легендарный статус.
+            </p>
+          </div>
+          <figure class="photo-frame landscape">
+            <img src="assets/gallery/birthday-01.jpg" alt="Именинник с друзьями на празднике">
+            <figcaption>За дружбу, настроение и моменты, которые потом вспоминают долго.</figcaption>
+          </figure>
+        </article>
+
+        <article class="scene scene-reverse reveal" style="--chapter-number: '02'; --scene-accent: var(--pink); --scene-glow: rgba(255, 63, 143, 0.34);">
+          <div class="scene-copy">
+            <p class="chapter">02 / Город</p>
+            <h2>Пусть огни города включаются в твою честь</h2>
+            <p>
+              Больше прогулок, хороших новостей, красивых вечеров и таких кадров,
+              где даже холод выглядит как часть большого приключения.
+            </p>
+          </div>
+          <figure class="photo-frame landscape tall-mobile">
+            <img src="assets/gallery/birthday-02.jpg" alt="Именинник с другом на зимней улице с огнями">
+            <figcaption>Город сияет, когда настроение правильное.</figcaption>
+          </figure>
+        </article>
+
+        <article class="scene reveal" style="--chapter-number: '03'; --scene-accent: var(--gold); --scene-glow: rgba(255, 209, 102, 0.32);">
+          <div class="scene-copy">
+            <p class="chapter">03 / Уверенность</p>
+            <h2>Пусть все получается спокойно и по-взрослому</h2>
+            <p>
+              Желаю ясной головы, сильного характера, удачных решений и ощущения,
+              что ты идешь туда, куда сам выбрал.
+            </p>
+          </div>
+          <figure class="photo-frame portrait">
+            <img src="assets/gallery/birthday-03.jpg" alt="Именинник на фоне башни">
+            <figcaption>Спокойный взгляд человека, у которого все впереди.</figcaption>
+          </figure>
+        </article>
+
+        <article class="scene scene-reverse reveal" style="--chapter-number: '04'; --scene-accent: var(--green); --scene-glow: rgba(182, 255, 91, 0.3);">
+          <div class="scene-copy">
+            <p class="chapter">04 / Харизма</p>
+            <h2>Пусть улыбка всегда остается твоим главным чит-кодом</h2>
+            <p>
+              В этот день желаю столько поводов улыбаться, чтобы обычный календарь
+              не выдержал и записал этот день отдельной главой.
+            </p>
+          </div>
+          <figure class="photo-frame portrait">
+            <img src="assets/gallery/birthday-04.jpg" alt="Именинник улыбается на улице">
+            <figcaption>Официальный портрет хорошего настроения.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="wish-zone" id="wishes" aria-labelledby="wishesTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Работа mode</p>
+          <h2 id="wishesTitle">Пусть работа идет легко, а деньги идут много</h2>
+        </div>
+        <div class="wish-grid">
+          <article class="wish-card reveal">
+            <span class="wish-index">01</span>
+            <h3>Хорошей работы в Таттелекоме</h3>
+            <p>Пусть смены проходят спокойно, задачи решаются быстро, а начальство видит твой уровень.</p>
+          </article>
+          <article class="wish-card reveal">
+            <span class="wish-index">02</span>
+            <h3>Много-много денег</h3>
+            <p>Чтобы хватало и на мечты, и на спонтанные планы, и на красивую жизнь без лишних расчетов.</p>
+          </article>
+          <article class="wish-card reveal">
+            <span class="wish-index">03</span>
+            <h3>Здоровья и фарта</h3>
+            <p>Пусть сил будет больше, чем дел, а удача появляется ровно там, где она нужна.</p>
+          </article>
+          <article class="wish-card reveal">
+            <span class="wish-index">04</span>
+            <h3>Свободы и кайфа</h3>
+            <p>Пусть в жизни будет место для отдыха, друзей, поездок, вкусной еды и громких тостов.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="village-callout reveal" id="village" aria-labelledby="villageTitle">
+        <p class="eyebrow">Сюжетный поворот</p>
+        <h2 id="villageTitle">Булата на день рождения в деревне можешь как ждать, так и не ждать</h2>
+        <p>
+          Официальный подарок вы получите в течение дня, ожидайте сообщения.
+        </p>
+        <div class="village-actions">
+          <button class="celebrate-button gift-trigger" type="button">
+            <span class="spark" aria-hidden="true"></span>
+            <span>Получить официальный подарок</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="car-gift reveal" aria-labelledby="carTitle">
+        <div class="car-copy">
+          <p class="eyebrow">Мужское счастье</p>
+          <h2 id="carTitle">Порш 911, который всегда рядом</h2>
+          <p class="car-quote">
+            "я не могу себе позволить это, но хоть так могу тебе подарить мужское счастье"
+          </p>
+        </div>
+        <div class="car-showroom" aria-label="Вращающийся Порш 911">
+          <canvas id="porscheCanvas" width="900" height="520"></canvas>
+          <span class="turntable-label">911</span>
+        </div>
+      </section>
+
+      <section class="finale" aria-labelledby="finaleTitle">
+        <div class="finale-copy reveal">
+          <p class="eyebrow">Финальный залп</p>
+          <h2 id="finaleTitle">С днем рождения. Пусть год будет богатым на победы</h2>
+          <p>
+            Желаю уверенности, здоровья, настоящих друзей, хорошей работы,
+            огромных денег и такого настроения, чтобы каждый новый день начинался с ощущения:
+            все будет мощно.
+          </p>
+          <button class="celebrate-button firework-trigger" type="button">
+            <span class="spark" aria-hidden="true"></span>
+            <span>Куча поздравлений</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div id="wishRain" class="wish-rain" aria-live="polite" aria-atomic="false"></div>
+
+    <div class="gift-modal" id="giftModal" role="dialog" aria-modal="true" aria-labelledby="giftModalTitle" hidden>
+      <div class="gift-modal-backdrop" data-gift-close></div>
+      <section class="gift-dialog" aria-describedby="giftModalText">
+        <button class="gift-close" type="button" aria-label="Закрыть окно" data-gift-close>×</button>
+        <p class="eyebrow">Официальная выдача</p>
+        <h2 id="giftModalTitle">Заявка принята</h2>
+        <p id="giftModalText">
+          Официальный подарок будет выдан в течение дня. Ожидайте сообщения.
+        </p>
+        <div class="gift-status" aria-hidden="true">
+          <span>STATUS</span>
+          <strong>APPROVED</strong>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span>Сделано для дня рождения.</span>
+      <span>Деньги, фарт и праздник.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
